@@ -1,0 +1,39 @@
+class MinStack {
+public:
+    
+    MinStack() {
+        
+    }
+
+    multiset<int> help;
+    stack<int> st;
+    
+    void push(int val) {
+        st.push(val);
+        help.insert(val);
+    }
+    
+    void pop() {
+        int top = st.top();
+        st.pop();
+        help.erase(help.find(top));
+    }
+    
+    int top() {
+      return st.top();
+    }
+    
+    int getMin() {
+        auto i = help.begin();
+        return *i;
+    }
+};
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack* obj = new MinStack();
+ * obj->push(val);
+ * obj->pop();
+ * int param_3 = obj->top();
+ * int param_4 = obj->getMin();
+ */
