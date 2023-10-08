@@ -17,7 +17,7 @@ class Solution {
         
         ListNode even = new ListNode(0);
         ListNode tempe = even;
-        
+    
         while(temp!=null)
         {
             tempo.next = temp;
