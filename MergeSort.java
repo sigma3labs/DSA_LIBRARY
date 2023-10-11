@@ -1,3 +1,4 @@
+import java. util.Scanner;
 public class MergeSort {
     public static void printArr(int arr[]){
             for(int i=0; i<arr.length; i++){
@@ -50,8 +51,18 @@ public class MergeSort {
     
         }
         public static void main(String []args){
-            int arr[]= {9,7,4,5,1,3};
+            Scanner sc =new Scanner(System.in);
+            System.out.print("Enter the length of Array: ");
+            int len=sc.nextInt();
+
+            int arr[]=new int[len];
+            System.out.println("Enter the Elements of Array");
+            for(int i=0; i<arr.length; i++){
+                arr[i]=sc.nextInt();
+            }
+
             merge_Sort(arr,0,arr.length-1);
+            System.out.print("Sorted Array : ");
             printArr(arr);
         }
     
