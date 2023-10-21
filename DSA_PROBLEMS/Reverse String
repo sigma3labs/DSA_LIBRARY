@@ -1,0 +1,11 @@
+//We can reverse a string using "reverse" inbuild function of cpp
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   string s = "Arpan";
+   reverse(s.begin(),s.end());
+   cout<<s;
+    return 0;
+}
